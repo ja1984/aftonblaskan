@@ -10,7 +10,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<!-- Place favicon.ico in the root directory -->
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -19,17 +19,21 @@
         <![endif]-->
 
 	<!-- Add your site or application content here -->
-
+<div class="container">
 <h1>Aftonblaskan</h1>
 <p>Alla aftonbladets ickeartiklar enkelt samlade på ett ställe</p>
 
 <ul data-bind="foreach: articles">
 	<li>
-	<a href="#" data-bind="attr:{'href':url}">
-		<h2 data-bind="text: title"></h2>
-	</a>
+	
+		<h2>
+			<a href="#" data-bind="attr:{'href':url}, text: title"></a>
+			<span data-bind="text: published"></span>
+		</h2>
+	
 	</li>
 </ul>
+</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
